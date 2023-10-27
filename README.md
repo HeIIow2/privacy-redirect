@@ -2,13 +2,16 @@
 
 [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)
 
+This is a fork. Credits to [Simon Brazell](https://github.com/SimonBrazell). The puropose of this fork is, to revive this amazing project, which unfortunately gone inactive. 
+
 ## Get
 
-[![Firefox Add-on](src/assets/images/badge-amo.png)](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/)
-[![Chrome Extension](src/assets/images/badge-chrome.png)](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
-[![Edge Extension](src/assets/images/badge-ms.png)](https://microsoftedge.microsoft.com/addons/detail/privacy-redirect/elnabkhcgpajchapppkhiaifkgikgihj)
+<!---[![Firefox Add-on](src/assets/images/badge-amo.png)](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/)--->
+
 
 ## Donate
+
+> These donations go to [Simon Brazell](https://github.com/SimonBrazell), and I am not [Simon Brazell](https://github.com/SimonBrazell).
 
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/SimonBrazell/donate) [![Buy me a coffee](src/assets/images/buy-me-a-coffee.png)](https://www.buymeacoffee.com/SimonBrazell)
 
