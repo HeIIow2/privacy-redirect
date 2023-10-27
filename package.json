@@ -1,5 +1,6 @@
 {
   "name": "privacy-redirect",
+  "version": "1.2.0",
   "description": "Redirects Twitter, YouTube, Instagram and more to privacy friendly alternatives.",
   "engines": {
     "node": ">=10.0.0",
@@ -7,19 +8,22 @@
   },
   "scripts": {
     "build": "web-ext build --overwrite-dest --source-dir ./src/",
-    "test": "web-ext lint --source-dir ./src/ || true"
+    "test": "web-ext lint --source-dir ./src/ || true",
+    "update-manifest-version": "node tools/updateManifestVersion.js",
+    "release": "release minor && npm run update-manifest-version && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimonBrazell/privacy-redirect.git"
+    "url": "git+https://github.com/HeIIow2/privacy-redirect.git"
   },
-  "author": "SimonBrazell",
+  "author": "Hazel",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/SimonBrazell/privacy-redirect/issues"
+    "url": "https://github.com/HeIIow2/privacy-redirect/issues"
   },
-  "homepage": "https://github.com/SimonBrazell/privacy-redirect#readme",
+  "homepage": "https://github.com/HeIIow2/privacy-redirect#readme",
   "devDependencies": {
-    "web-ext": "^6.2.0"
+    "web-ext": "^6.2.0",
+    "release": "^6.3.1"
   }
 }
