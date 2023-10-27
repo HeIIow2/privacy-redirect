@@ -6,7 +6,7 @@ This is a fork. Credits to [Simon Brazell](https://github.com/SimonBrazell). The
 
 ## Get
 
-<!---[![Firefox Add-on](src/assets/images/badge-amo.png)](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/)--->
+[![Firefox Add-on](src/assets/images/badge-amo.png)](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect-v2/)
 
 
 ## Donate
