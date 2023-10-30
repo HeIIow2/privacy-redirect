@@ -306,7 +306,7 @@ function redirectYouTube(url, initiator, type) {
   }
 
   return `${
-    invidiousInstance || commonHelper.getRandomInstance(invidiousRandomPool)
+    invidiousInstance || "https://yt.artemislena.eu"
   }${url.pathname.replace("/shorts", "")}${url.search}`;
 }
 
