@@ -135,7 +135,7 @@ browser.storage.sync.get(
     theme.value = result.theme || "";
     if (result.theme) document.body.classList.add(result.theme);
     nitterInstance.value = result.nitterInstance || "";
-    invidiousInstance.value = result.invidiousInstance || "";
+    invidiousInstance.value = result.invidiousInstance || "https://yt.artemislena.eu";
     bibliogramInstance.value = result.bibliogramInstance || "";
     osmInstance.value = result.osmInstance || "";
     redditInstance.value = result.redditInstance || "";
