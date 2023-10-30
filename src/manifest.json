@@ -49,11 +49,9 @@
         "*://invidious.asir.dev/*",
         "*://iv.ggtyler.dev/*",
         "*://iv.nboeck.de/*",
-        "*://inv.in.projectsegfau.lt/*",
         "*://invidious.private.coffee/*",
         "*://iv.datura.network/*",
         "*://anontube.lvkaszus.pl/*",
-        "*://invidious.drgns.space/*",
         "*://inv.us.projectsegfau.lt/*",
         "*://invidious.perennialte.ch/*",
         "*://invidious.einfachzocken.eu/*",
@@ -64,6 +62,8 @@
         "*://yewtu.be/*",
         "*://iv.melmac.space/*",
         "*://inv.citw.lgbt/*",
+        "*://inv.in.projectsegfau.lt/*",
+        "*://invidious.drgns.space/*",
         "*://inv.bp.projectsegfau.lt/*",
         "*://invidious.projectsegfau.lt/*",
         "*://pjsfi2szfkb4guqzmfmlyq4no46fayertjrwt4h2uughccrh2lvq.b32.i2p/*",
@@ -71,8 +71,8 @@
         "*://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p/*",
         "*://grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion/*",
         "*://osbivz6guyeahrwp2lnwyjk2xos342h4ocsxyqrlaopqjuhwn2djiiyd.onion/*",
-        "*://u2cvlit75owumwpy4dj2hsmvkq7nvrclkpht7xgyye2pyoxhpmclkrad.onion/*",
         "*://kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion/*",
+        "*://euxxcnhsynwmfidvhjf6uzptsmh4dipkmgdmcmxxuo7tunp3ad2jrwyd.onion/*",
         "*://ng27owmagn5amdm7l5s3rsqxwscl5ynppnis5dqcasogkyxcfqn7psid.onion/*",
         "*://iv.odysfvr23q5wgt7i456o5t3trw2cw5dgn56vbjfbq2m7xsc5vqbqpcyd.onion/*",
         "*://invidious.g4c3eya4clenolymqbpgwz3q3tawoxw56yhzk4vugqrl6dtu3ejvhjid.onion/*",
@@ -82,7 +82,7 @@
         "*://inv.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/*",
         "*://w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion/*",
         "*://c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion/*",
-        "*://euxxcnhsynwmfidvhjf6uzptsmh4dipkmgdmcmxxuo7tunp3ad2jrwyd.onion/*"
+        "*://u2cvlit75owumwpy4dj2hsmvkq7nvrclkpht7xgyye2pyoxhpmclkrad.onion/*"
       ],
       "js": [
         "assets/javascripts/persist-invidious-prefs.js"

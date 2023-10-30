@@ -1,6 +1,6 @@
 {
   "name": "privacy-redirect",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Redirects Twitter, YouTube, Instagram and more to privacy friendly alternatives.",
   "engines": {
     "node": ">=10.0.0",
@@ -9,9 +9,9 @@
   "scripts": {
     "build": "web-ext build --overwrite-dest --source-dir ./src/",
     "test": "web-ext lint --source-dir ./src/ || true",
-    "dev": "web-ext run --source-dir ./src/ --firefox=\"/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/active/files/bin/firefox\"", 
+    "dev": "web-ext run --source-dir ./src/ --firefox=\"/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/active/files/bin/firefox\"",
     "update-manifest-version": "node tools/updateManifestVersion.js",
-    "release": "npm run update-invidious && release minor && npm run update-manifest-version && npm run build",
+    "release": "release minor && npm run update-manifest-version && npm run build",
     "update-invidious": "node tools/updateInvidiousInstances.js"
   },
   "repository": {
