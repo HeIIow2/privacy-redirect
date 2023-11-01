@@ -331,15 +331,15 @@ function redirectTwitter(url, initiator) {
   }
   if (url.host.split(".")[0] === "pbs" || url.host.split(".")[0] === "video") {
     return `${
-      nitterInstance || commonHelper.getRandomInstance(nitterRandomPool)
+      nitterInstance || "https://nitter.net"
     }/pic/${encodeURIComponent(url.href)}`;
   } else if (url.pathname.split("/").includes("tweets")) {
     return `${
-      nitterInstance || commonHelper.getRandomInstance(nitterRandomPool)
+      nitterInstance || "https://nitter.net"
     }${url.pathname.replace("/tweets", "")}${url.search}`;
   } else {
     return `${
-      nitterInstance || commonHelper.getRandomInstance(nitterRandomPool)
+      nitterInstance || "https://nitter.net"
     }${url.pathname}${url.search}`;
   }
 }
