@@ -307,7 +307,7 @@ function redirectYouTube(url, initiator, type) {
 
   return `${
     invidiousInstance || "https://yt.artemislena.eu"
-  }${url.pathname.replace("/shorts", "")}${url.search}`;
+  }${url.pathname}${url.search}`;
 }
 
 function redirectTwitter(url, initiator) {
