@@ -1,6 +1,6 @@
 {
   "name": "privacy-redirect",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Redirects Twitter, YouTube, Instagram and more to privacy friendly alternatives.",
   "engines": {
     "node": ">=10.0.0",
