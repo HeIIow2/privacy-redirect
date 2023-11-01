@@ -662,6 +662,21 @@ browser.runtime.onInstalled.addListener((details) => {
           disableWikipedia: true,
         });
       }
+      if (result.disableBibliogram === undefined) {
+        browser.storage.sync.set({
+          disableBibliogram: true,
+        });
+      }
+      if (result.disableReddit === undefined) {
+        browser.storage.sync.set({
+          disableReddit: true,
+        });
+      }
+      if (result.disableOsm === undefined) {
+        browser.storage.sync.set({
+          disableOsm: true,
+        });
+      }
     }
   );
   if (details.reason === "update") {
