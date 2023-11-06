@@ -12,7 +12,7 @@
     "dev": "web-ext run --source-dir ./src/ --firefox=\"/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/active/files/bin/firefox\"",
     "update-manifest-version": "node tools/updateManifestVersion.js",
     "release": "release patch && npm run update-manifest-version && npm run build",
-    "update-invidious": "node tools/updateInvidiousInstances.js"
+    "update-invidious": "node tools/updateInvidiousInstances.js && git commit -am \"Update Invidious instances\" && git push"
   },
   "repository": {
     "type": "git",
