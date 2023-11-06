@@ -250,7 +250,7 @@ function isFirefox() {
   return typeof InstallTrigger !== "undefined";
 }
 
-async function redirectYouTube(url, initiator, type) {
+function redirectYouTube(url, initiator, type) {
   if (disableInvidious || isException(url, initiator)) {
     return null;
   }
@@ -306,11 +306,11 @@ async function redirectYouTube(url, initiator, type) {
   }
 
   return `${
-    invidiousInstance || "https://yt.artemislena.eu"
+    invidiousInstance || commonHelper.getRandomInstance(invidiousRandomPool)
   }${url.pathname}${url.search}`;
 }
 
-async function redirectTwitter(url, initiator) {
+function redirectTwitter(url, initiator) {
   if (disableNitter || isException(url, initiator)) {
     return null;
   }
@@ -331,20 +331,20 @@ async function redirectTwitter(url, initiator) {
   }
   if (url.host.split(".")[0] === "pbs" || url.host.split(".")[0] === "video") {
     return `${
-      nitterInstance || "https://nitter.net"
+      nitterInstance || getRandomInstance(nitterRandomPool)
     }/pic/${encodeURIComponent(url.href)}`;
   } else if (url.pathname.split("/").includes("tweets")) {
     return `${
-      nitterInstance || "https://nitter.net"
+      nitterInstance || getRandomInstance(nitterRandomPool)
     }${url.pathname.replace("/tweets", "")}${url.search}`;
   } else {
     return `${
-      nitterInstance || "https://nitter.net"
+      nitterInstance || getRandomInstance(nitterRandomPool)
     }${url.pathname}${url.search}`;
   }
 }
 
-async function redirectInstagram(url, initiator, type) {
+function redirectInstagram(url, initiator, type) {
   if (disableBibliogram || isException(url, initiator)) {
     return null;
   }
@@ -366,12 +366,12 @@ async function redirectInstagram(url, initiator, type) {
     instagramReservedPaths.includes(url.pathname.split("/")[1])
   ) {
     return `${
-      bibliogramInstance || await commonHelper.getRandomOnlineInstance(bibliogramRandomPool)
+      bibliogramInstance || commonHelper.getRandomInstance(bibliogramRandomPool)
     }${url.pathname}${url.search}`;
   } else {
     // Likely a user profile, redirect to '/u/...'
     return `${
-      bibliogramInstance || await commonHelper.getRandomOnlineInstance(bibliogramRandomPool)
+      bibliogramInstance || commonHelper.getRandomInstance(bibliogramRandomPool)
     }/u${url.pathname}${url.search}`;
   }
 }
@@ -584,7 +584,7 @@ function redirectWikipedia(url, initiator) {
 }
 
 browser.webRequest.onBeforeRequest.addListener(
-  async (details) => {
+  (details) => {
     const url = new URL(details.url);
     let initiator;
     if (details.originUrl) {
@@ -595,15 +595,15 @@ browser.webRequest.onBeforeRequest.addListener(
     let redirect;
     if (youtubeDomains.includes(url.host)) {
       redirect = {
-        redirectUrl: await redirectYouTube(url, initiator, details.type),
+        redirectUrl: redirectYouTube(url, initiator, details.type),
       };
     } else if (twitterDomains.includes(url.host)) {
       redirect = {
-        redirectUrl: await redirectTwitter(url, initiator),
+        redirectUrl: redirectTwitter(url, initiator),
       };
     } else if (instagramDomains.includes(url.host)) {
       redirect = {
-        redirectUrl: await redirectInstagram(url, initiator, details.type),
+        redirectUrl: redirectInstagram(url, initiator, details.type),
       };
     } else if (url.href.match(googleMapsRegex)) {
       redirect = {
@@ -635,6 +635,8 @@ browser.webRequest.onBeforeRequest.addListener(
       );
       console.info("Details", details);
     }
+
+    console.log(redirect);
     return redirect;
   },
   {
@@ -692,9 +694,14 @@ browser.runtime.onInstalled.addListener((details) => {
             whitelist: null,
           });
         }
-        if (result.invidiousInstance === "https://invidio.us") {
+        if (!result.invidiousInstance) {
           browser.storage.sync.set({
-            invidiousInstance: null,
+            invidiousInstance: "https://yt.artemislena.eu",
+          });
+        }
+        if (!result.nitterInstance) {
+          browser.storage.sync.set({
+            nitterInstance: "https://nitter.net",
           });
         }
       }
