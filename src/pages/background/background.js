@@ -305,6 +305,8 @@ function redirectYouTube(url, initiator, type) {
     url.searchParams.append("autoplay", 1);
   }
 
+  console.log(invidiousInstance);
+
   return `${
     invidiousInstance || commonHelper.getRandomInstance(invidiousRandomPool)
   }${url.pathname}${url.search}`;
@@ -679,6 +681,16 @@ browser.runtime.onInstalled.addListener((details) => {
           disableOsm: true,
         });
       }
+      if (!result.invidiousInstance) {
+        browser.storage.sync.set({
+          invidiousInstance: "https://yt.artemislena.eu",
+        });
+      }
+      if (!result.nitterInstance) {
+        browser.storage.sync.set({
+          nitterInstance: "https://nitter.net",
+        });
+      }
     }
   );
   if (details.reason === "update") {
@@ -692,16 +704,6 @@ browser.runtime.onInstalled.addListener((details) => {
           browser.storage.sync.set({
             exceptions: result.exceptions.concat(whitelist),
             whitelist: null,
-          });
-        }
-        if (!result.invidiousInstance) {
-          browser.storage.sync.set({
-            invidiousInstance: "https://yt.artemislena.eu",
-          });
-        }
-        if (!result.nitterInstance) {
-          browser.storage.sync.set({
-            nitterInstance: "https://nitter.net",
           });
         }
       }
