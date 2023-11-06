@@ -6,11 +6,24 @@
     <title>Privacy redirect test</title>
 </head>
 <body>
-    <!--https://www.youtube.com/watch?v=dQw4w9WgXcQ-->
+    <style>
+        .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+    </style>
+
+    <h1>Privacy redirect test</h1>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=PXENTU_-Syt26QCy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">YouTube anchor</a>
-
+    <div class="links">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">YouTube anchor</a>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=lgbt&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #lgbt</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/elonmusk" target="_blank">Twitter anchor</a>
+    </div>
 </body>
 </html>
