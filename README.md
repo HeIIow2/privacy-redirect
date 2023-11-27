@@ -4,6 +4,8 @@
 
 This is a fork. Credits to [Simon Brazell](https://github.com/SimonBrazell). The puropose of this fork is, to revive this amazing project, which unfortunately gone inactive. 
 
+It is missing a toolbar icon though ...
+
 ## Get
 
 [![Firefox Add-on](src/assets/images/badge-amo.png)](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect-v2/)
